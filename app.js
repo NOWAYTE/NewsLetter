@@ -33,7 +33,7 @@ app.post('/', function (req, res) {
 
   const options = {
     method: 'POST',
-    auth: `Daniel:process.env.API_KEY`,
+    auth: `Daniel:${process.env.API_KEY}`,
   }
 
   const request = https.request(url, options, function (response) {
